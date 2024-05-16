@@ -1,0 +1,28 @@
+<script type="text/JavaScript">
+  const leTokenSFF = async () => {
+      var dados = {
+        token: localStorage.getItem("token"),
+      };
+      console.log(JSON.stringify(dados));
+      const response= await fetch("http://localhost:4242/api/pgs/auth/letoken", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dados),
+      })
+      console.log(response);
+      dados= await  response.json()
+      console.log(dados);
+      if(!response.ok){
+        alert("Erro ao fazer login");
+      }
+      else{
+        alert("token lido com sucesso");
+        console.log(dados);
+        // Guardar o token no local storage
+        //localStorage.setItem("token", dados.token);
+        //window.location.href = "http://localhost:4242/bo/gerirCarros";
+      }
+  };
+</script>
