@@ -1,5 +1,5 @@
 {
-  "name": "web-service-postgres",
+  "name": "web-service-final",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alfZone/webServicePgs.git"
+    "url": "git+https://github.com/alfZone/webServiceFinal.git"
   },
   "keywords": [
     "ws",
